@@ -1,3 +1,23 @@
+CREATE TABLE `hero table` (
+  `hero_id` int NOT NULL AUTO_INCREMENT,
+  `Firstname` varchar(50) NOT NULL,
+  `Lastname` varchar(50) NOT NULL,
+  `Alias` varchar(50) NOT NULL,
+  `Ability` varchar(50) DEFAULT NULL,
+  `TeamID` int NOT NULL,
+  PRIMARY KEY (`hero_id`),
+  UNIQUE KEY `hero_id_UNIQUE` (`hero_id`),
+  KEY `TeamID_idx` (`TeamID`),
+  CONSTRAINT `TeamID` FOREIGN KEY (`TeamID`) REFERENCES `team` (`TeamID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `team` (
+  `TeamID` int NOT NULL,
+  `TeamName` varchar(50) NOT NULL,
+  `Objective` varchar(100) NOT NULL,
+  KEY `Team ID_idx` (`TeamID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 USE heroes;
 
 INSERT INTO team (TeamName, Objective)
