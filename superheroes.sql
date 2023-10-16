@@ -1,4 +1,4 @@
-CREATE TABLE `hero table` (
+CREATE TABLE `hero` (
   `hero_id` int NOT NULL AUTO_INCREMENT,
   `Firstname` varchar(50) NOT NULL,
   `Lastname` varchar(50) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE `team` (
   KEY `Team ID_idx` (`TeamID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-USE heroes;
+USE `hero`;
 
 INSERT INTO team (TeamName, Objective)
 VALUES ('JLA','Protect the world'), 
